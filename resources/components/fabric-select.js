@@ -777,7 +777,8 @@ Polymer({
 			if(!newPrefix || (value+"").indexOf(newPrefix) !==0)
 				listItems.push(item);
 		});
-
+		//Added by AAAbd to sort the lists by names
+		listItems = listItems.sort((a,b)=>(a?.name> b?.name) ? 1 :-1)
 		this.set("listItems", listItems);
 		//console.log("this.selected", this.selected)
 		//console.log("listItems", this.listItems )
